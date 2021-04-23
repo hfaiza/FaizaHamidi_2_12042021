@@ -3,9 +3,9 @@ html {
 }
 
 :root {
-  --color1: #f2f2f2;
-  --color2: #0065fc;
-  --color3: #deebff;
+  --grey: #f2f2f2;
+  --blue: #0065fc;
+  --lightblue: #deebff;
 }
 
 body {
@@ -23,7 +23,8 @@ body {
 h1,
 h2,
 h3,
-span {
+span,
+strong {
   font-weight: bold;
 }
 
@@ -51,7 +52,6 @@ a {
 
 header {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
@@ -60,10 +60,13 @@ header {
   padding-top: 2rem;
 }
 
-header div {
+nav {
+  margin-left: auto;
+}
+
+header a {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
 }
 
 nav a {
@@ -80,8 +83,8 @@ nav ul {
 }
 
 nav a:hover {
-  color: var(--color2);
-  border-top: solid 2px var(--color2);
+  color: var(--blue);
+  border-top: solid 2px var(--blue);
 }
 
 ul {
@@ -90,8 +93,10 @@ ul {
 }
 
 #inscription {
-  color: var(--color2);
+  color: var(--blue);
   font-weight: bold;
+  padding-top: 2rem;
+  border-top: solid 2px transparent;
 }
 
 /* TITRE + SOUS-TITRE */
@@ -107,7 +112,7 @@ h1 + p {
 
 /* BARRE DE RECHERCHE */
 
-.box_recherche {
+form {
   display: flex;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -115,7 +120,7 @@ h1 + p {
 }
 
 label i {
-  background: var(--color1);
+  background: var(--grey);
   padding: 1rem 1rem 1rem 1.1rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -123,7 +128,7 @@ label i {
 
 #recherche {
   background: #fff;
-  border: solid 2px var(--color1);
+  border: solid 2px var(--grey);
   padding: 0.8rem;
 }
 
@@ -135,7 +140,7 @@ label i {
 
 button {
   font-weight: bold;
-  background: var(--color2);
+  background: var(--blue);
   border: none;
   color: #fff;
   font-size: 1rem;
@@ -146,7 +151,7 @@ button {
 
 /* FILTRES */
 
-.box_filtres {
+.bloc_filtres {
   display: inline-flex;
   flex-wrap: wrap;
   margin-top: 1.5rem;
@@ -154,7 +159,11 @@ button {
   font-weight: bold;
 }
 
-.f1 {
+.titre_filtres {
+  margin-right: 1rem;
+}
+
+.filtre {
   display: flex;
   border: solid 2px #e7e7e8;
   border-radius: 20px;
@@ -163,13 +172,9 @@ button {
   margin-bottom: 0.8rem;
 }
 
-.f0 {
-  margin-right: 1rem;
-}
-
-.f1:hover {
-  border: solid 2px var(--color3);
-  background: var(--color3);
+.filtre:hover {
+  border: solid 2px var(--lightblue);
+  background: var(--lightblue);
 }
 
 .left {
@@ -187,78 +192,83 @@ button {
 
 /* INFO */
 
-.log {
+.logements_disponibles {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0.8rem;
 }
 
-.log i {
+.logements_disponibles i {
   width: 0.8rem;
-  color: var(--color2);
-  border: var(--color1) solid 2px;
+  color: var(--blue);
+  border: var(--grey) solid 2px;
   border-radius: 20px;
   padding: 3px;
   text-align: center;
   font-size: 0.7rem;
 }
 
-.log p {
+.logements_disponibles p {
   font-size: 0.9rem;
   padding-left: 10px;
 }
 
 /* SECTION HÉBERGEMENTS + POPULAIRES */
 
-.heb-pop {
+.bloc-hebergements-et-populaires {
   display: flex;
   flex-wrap: wrap-reverse;
 }
 
-.heb {
+.bloc_hebergements {
   flex: 2;
   margin-right: 30px;
   padding: 30px;
-  background: var(--color1);
+  background: var(--grey);
   border-radius: 20px;
 }
 
-.pop {
+.bloc_populaires {
   flex: 1;
   padding: 30px;
-  background: var(--color1);
+  background: var(--grey);
   border-radius: 20px;
   position: relative;
 }
 
 .bleu {
-  color: var(--color2);
+  color: var(--blue);
   font-size: 0.8rem;
 }
 
 .gris {
-  color: var(--color1);
+  color: var(--grey);
   font-size: 0.8rem;
+}
+
+article p {
+  line-height: 1.6rem;
+  margin: 0;
 }
 
 /* HÉBERGEMENTS */
 
-.heb1 {
+.sous-bloc_hebergements {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   justify-content: space-between;
 }
 
-.heb1 article {
+.sous-bloc_hebergements article {
   height: 190px;
   width: 210px;
   position: relative;
   border: #fff solid 4px;
   border-radius: 20px;
   box-shadow: 0 0 20px #d1d1d1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cannebiere_image {
@@ -310,13 +320,13 @@ button {
   font-size: 0.9rem;
 }
 
-.heb p {
+.plus {
   font-weight: bold;
 }
 
 /* POPULAIRES */
 
-.pop1 {
+.sous-bloc_populaires {
   display: flex;
   flex-direction: column;
 }
@@ -330,7 +340,7 @@ h2 i {
   float: right;
 }
 
-.pop1 article {
+.sous-bloc_populaires article {
   height: 130px;
   width: 340px;
   position: relative;
@@ -377,13 +387,13 @@ h2 i {
   margin-bottom: 2rem;
 }
 
-.box_activites {
+.bloc_activites {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.box_activites article {
+.bloc_activites article {
   width: 280px;
   background-size: cover;
   position: relative;
@@ -443,7 +453,7 @@ h2 i {
     no-repeat;
 }
 
-.box_activites h3 {
+.bloc_activites h3 {
   width: 240px;
   background: #fff;
   position: absolute;
@@ -456,7 +466,7 @@ h2 i {
 
 .footer {
   width: 100%;
-  background: var(--color1);
+  background: var(--grey);
 }
 
 footer {
