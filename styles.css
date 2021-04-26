@@ -115,7 +115,6 @@ h1 + p {
 form {
   display: flex;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   font-family: "Raleway", sans-serif;
 }
 
@@ -408,12 +407,6 @@ h2 i {
     no-repeat;
 }
 
-.fort-frioul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .fort_image {
   height: 220px;
   background: url(images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg)
@@ -435,12 +428,6 @@ h2 i {
   background-position: left -130px top 0;
 }
 
-.dame-longchamp {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .notre_dame_image {
   height: 170px;
   background: url(images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg)
@@ -453,7 +440,7 @@ h2 i {
     no-repeat;
 }
 
-.bloc_activites h3 {
+.activites h3 {
   width: 240px;
   background: #fff;
   position: absolute;
@@ -480,5 +467,113 @@ footer {
 }
 
 footer div {
-  width: 25rem;
+  padding-right: 14rem;
+}
+
+/* MEDIA QUERIES TABLETTE */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #bloc-page {
+    max-width: 95%;
+  }
+
+  /* HÉBERGEMENTS */
+
+  .sous-bloc_hebergements article {
+    height: 250px;
+  }
+
+  .cannebiere_image,
+  .port_image,
+  .mouettes_image {
+    background-size: cover;
+  }
+
+  .port_image {
+    background-position: left 0px top -80px;
+  }
+
+  /* POPULAIRES */
+
+  .bloc_populaires {
+    margin-bottom: 2rem;
+  }
+
+  .sous-bloc_populaires {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sous-bloc_populaires article {
+    height: 250px;
+    width: 250px;
+  }
+
+  .soleil_image,
+  .eau_image {
+    background-size: contain;
+  }
+
+  .bleu_blanc_image {
+    background-size: cover;
+    background-position: left 0px top -150px;
+  }
+
+  .description2 {
+    height: 80px;
+    width: 240px;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 0px 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .bloc_hebergements {
+    margin-right: 0;
+  }
+
+  .sous-bloc_hebergements article {
+    width: 250px;
+  }
+
+  .description1 {
+    width: 240px;
+  }
+
+  /* ACTIVITÉS */
+
+  .activites article {
+    width: 440px;
+  }
+
+  .activites h3 {
+    width: 400px;
+  }
+
+  .fort_image {
+    background-position: left 0 top -230px;
+  }
+
+  .frioul_image {
+    background-position: left 0 top -100px;
+  }
+
+  .notre_dame_image {
+    background-position: left 0 top -30px;
+  }
+
+  .longchamp_image {
+    background-position: left 0 top -50px;
+  }
+
+  /* PIED DE PAGE */
+
+  footer {
+    max-width: 95%;
+  }
+
+  footer div {
+    padding-right: 8rem;
+  }
 }
