@@ -217,7 +217,6 @@ button {
 
 .bloc-hebergements-et-populaires {
   display: flex;
-  flex-wrap: wrap-reverse;
 }
 
 .bloc_hebergements {
@@ -477,20 +476,16 @@ footer div {
     max-width: 95%;
   }
 
-  /* HÉBERGEMENTS */
+  /* BARRE DE RECHERCHE */
 
-  .sous-bloc_hebergements article {
-    height: 250px;
+  form {
+    margin-bottom: 2rem;
   }
 
-  .cannebiere_image,
-  .port_image,
-  .mouettes_image {
-    background-size: cover;
-  }
+  /* HÉBERGEMENTS + POPULAIRES */
 
-  .port_image {
-    background-position: left 0px top -80px;
+  .bloc-hebergements-et-populaires {
+    flex-direction: column-reverse;
   }
 
   /* POPULAIRES */
@@ -499,56 +494,78 @@ footer div {
     margin-bottom: 2rem;
   }
 
-  .sous-bloc_populaires {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .sous-bloc_populaires article {
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 100%;
+    background-size: cover;
   }
 
-  .soleil_image,
+  .soleil_image {
+    background-position: left 0px top -200px;
+  }
+
   .eau_image {
-    background-size: contain;
+    background-position: left -200px top -200px;
   }
 
   .bleu_blanc_image {
-    background-size: cover;
-    background-position: left 0px top -150px;
+    background-position: left -100px top -500px;
   }
 
   .description2 {
-    height: 80px;
-    width: 240px;
-    position: absolute;
-    bottom: 0px;
-    border-radius: 0 0 10px 10px;
-    padding: 5px 0px 5px 10px;
-    font-size: 0.9rem;
+    height: 210px;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.2rem;
   }
+
+  /* HÉBERGEMENTS */
 
   .bloc_hebergements {
     margin-right: 0;
   }
 
+  .sous-bloc_hebergements {
+    display: block;
+  }
+
   .sous-bloc_hebergements article {
-    width: 250px;
+    height: 220px;
+    width: 100%;
+    background-size: cover;
   }
 
   .description1 {
-    width: 240px;
+    height: 210px;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.2rem;
+  }
+
+  .cannebiere_image,
+  .panier_image {
+    background-position: left 0 top -50px;
+  }
+
+  .port_image,
+  .mouettes_image {
+    background-position: left 130px top -210px;
+  }
+
+  .mer_image {
+    background-position: left 0 top -250px;
+  }
+
+  .amina_image {
+    background-position: left 0 top -450px;
   }
 
   /* ACTIVITÉS */
 
   .activites article {
-    width: 440px;
+    width: 350px;
   }
 
   .activites h3 {
-    width: 400px;
+    width: 310px;
   }
 
   .fort_image {
@@ -574,6 +591,6 @@ footer div {
   }
 
   footer div {
-    padding-right: 8rem;
+    padding-right: 5rem;
   }
 }
