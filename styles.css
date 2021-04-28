@@ -64,11 +64,6 @@ nav {
   margin-left: auto;
 }
 
-header a {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 nav a {
   display: block;
   padding-top: 2rem;
@@ -193,7 +188,6 @@ button {
 
 .logements_disponibles {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0.8rem;
 }
@@ -202,7 +196,7 @@ button {
   width: 0.8rem;
   color: var(--blue);
   border: var(--grey) solid 2px;
-  border-radius: 20px;
+  border-radius: 50%;
   padding: 3px;
   text-align: center;
   font-size: 0.7rem;
@@ -261,7 +255,7 @@ article p {
 
 .sous-bloc_hebergements article {
   height: 190px;
-  width: 210px;
+  width: 17vw;
   position: relative;
   border: #fff solid 4px;
   border-radius: 20px;
@@ -309,12 +303,12 @@ article p {
 }
 
 .description1 {
-  width: 200px;
+  width: 16vw;
   background: #fff;
   position: absolute;
   bottom: 0px;
   border-radius: 0 0 10px 10px;
-  padding: 5px 0px 5px 10px;
+  padding: 0.5vw 0 0.5vw 1vw;
   font-size: 0.9rem;
 }
 
@@ -329,9 +323,9 @@ article p {
   flex-direction: column;
 }
 
-.bottom {
+.sous-bloc_populaires span {
   position: absolute;
-  bottom: 10px;
+  bottom: 1vw;
 }
 
 h2 i {
@@ -340,7 +334,7 @@ h2 i {
 
 .sous-bloc_populaires article {
   height: 130px;
-  width: 340px;
+  width: 100%;
   position: relative;
   border: #fff solid 4px;
   border-radius: 20px;
@@ -369,7 +363,7 @@ h2 i {
 
 .description2 {
   height: 120px;
-  width: 200px;
+  width: 50%;
   background: #fff;
   right: 0px;
   border-radius: 0 10px 10px 0;
@@ -392,7 +386,7 @@ h2 i {
 }
 
 .bloc_activites article {
-  width: 280px;
+  width: 22vw;
   background-size: cover;
   position: relative;
   border-radius: 20px;
@@ -440,12 +434,12 @@ h2 i {
 }
 
 .activites h3 {
-  width: 240px;
+  width: 20.5vw;
   background: #fff;
   position: absolute;
   bottom: 0px;
   border-radius: 0 0 20px 20px;
-  padding: 20px 20px 20px 20px;
+  padding: 1.5vw 0 1.5vw 1.5vw;
 }
 
 /* PIED DE PAGE */
@@ -495,7 +489,7 @@ footer div {
   }
 
   .sous-bloc_populaires article {
-    height: 220px;
+    height: 200px;
     width: 100%;
     background-size: cover;
   }
@@ -512,10 +506,12 @@ footer div {
     background-position: left -100px top -500px;
   }
 
-  .description2 {
-    height: 210px;
+  .description2,
+  .description1 {
+    height: 190px;
+    width: 60%;
     border-radius: 0 10px 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   /* HÉBERGEMENTS */
@@ -529,43 +525,53 @@ footer div {
   }
 
   .sous-bloc_hebergements article {
-    height: 220px;
+    height: 200px;
     width: 100%;
     background-size: cover;
   }
 
   .description1 {
-    height: 210px;
-    border-radius: 10px 0 0 10px;
-    font-size: 1.2rem;
+    right: 0px;
+    padding: 5px 5px 5px 15px;
+  }
+
+  .sous-bloc_hebergements span {
+    position: absolute;
+    bottom: 1vw;
   }
 
   .cannebiere_image,
   .panier_image {
-    background-position: left 0 top -50px;
+    background-position: left -200px top -50px;
   }
 
-  .port_image,
+  .port_image {
+    background-position: left -130px top -210px;
+  }
+
   .mouettes_image {
-    background-position: left 130px top -210px;
+    background-position: left -300px top -210px;
   }
 
   .mer_image {
-    background-position: left 0 top -250px;
+    background-position: left -200px top -300px;
   }
 
   .amina_image {
-    background-position: left 0 top -450px;
+    background-position: left -350px top -450px;
   }
 
   /* ACTIVITÉS */
 
+  .bloc_activites {
+  }
+
   .activites article {
-    width: 350px;
+    width: 45vw;
   }
 
   .activites h3 {
-    width: 310px;
+    width: 45vw;
   }
 
   .fort_image {
@@ -594,3 +600,216 @@ footer div {
     padding-right: 5rem;
   }
 }
+
+/* MEDIA QUERIES MOBILE */
+
+@media (min-width: 768px) {
+  button i {
+    display: none!important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {  
+  * {
+    box-sizing: border-box;
+  }
+
+  #bloc-page {
+    margin: 0;
+    }
+
+  .logo, #inscription, header + section, .bloc_hebergements, .activites {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  /* EN-TÊTE */
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    order: 1;
+    height: 4rem;
+    padding-top: 1rem;
+  }
+
+  #inscription {
+    order: 2;
+    margin-left: auto;
+  }
+
+  nav { 
+    order: 3;
+    border-top: none;
+    width: 100%;
+  }
+
+  nav ul {
+    padding-right: 0;
+  }
+
+  nav li {
+    width: 50%;
+  }
+
+  nav a {
+    padding-bottom: 1rem;
+    border-top: none;
+    border-bottom: solid 3px var(--grey);
+    text-align: center;
+  }
+
+  nav a:hover {
+    color: var(--blue);
+    border-top: none;
+    border-bottom: solid 3px var(--blue);
+  }
+
+  /* BARRE DE RECHERCHE */
+
+  form {
+    margin-bottom: 2rem;
+    justify-content: center;
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  button span {
+    display: none;
+  }
+
+  button i {
+    padding: 0.2rem;
+  }
+
+  button {
+    border-radius: 1rem;
+    position: absolute;
+    right: 0;
+  }
+
+  /* INFO */
+
+  .logements_disponibles {
+    align-items: baseline;
+  }
+
+  .logements_disponibles i {
+    padding-left: 0.4rem;
+    padding-right: 0.7rem;
+  } 
+
+  /* HÉBERGEMENTS + POPULAIRES */
+
+  .bloc-hebergements-et-populaires {
+    flex-direction: column-reverse;
+  }
+
+  /* HÉBERGEMENTS */
+
+  .bloc_hebergements {
+    background: #fff;
+    padding: 0;
+    margin-right: 5vw;
+    margin-top: 2rem;
+  }
+
+  .sous-bloc_hebergements {
+    display: block;
+  }
+
+  .bloc_hebergements article {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px #d1d1d1;
+  }
+
+  .cannebiere_image, .port_image, .mouettes_image {
+    background-size: cover;
+    background-position: left 0 top -50px;
+  }
+
+  .mer_image {
+    background-position: left 0 top -100px;
+  }
+
+  .amina_image {
+    background-position: left 0 top -200px;
+  }
+
+  .description1 {
+    width: 100%;
+    padding: 2%;
+  }
+
+  /* POPULAIRES */
+
+  .bloc_populaires {
+    border-radius: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .bloc_populaires article {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1em;
+    background-size: cover;
+  }
+
+  .description2 {
+    width: 55%;
+    height: 142px;
+    font-size: 0.9rem;
+  }
+
+  /* ACTIVITÉS */
+
+  .bloc_activites {
+    display: block;
+  }
+
+  .activites article {
+    height: 200px;
+    width: 100%;
+  }
+
+  .activites h3 {
+    width: 100%;
+    padding: 5%;
+  } 
+
+  .fort_image {
+    background-position: left 0 top -200px;
+  }
+
+  .calanques_image {
+    background-size: cover;
+    background-position: left 0 top -50px;
+  }
+
+  .longchamp_image {
+    background-position: left 0 top -50px;
+  }
+
+  /* PIED DE PAGE */
+
+  footer {
+    max-width: 90%;
+    flex-direction: column;
+  }
+
+  footer div {
+    padding-right: 5vw;
+    padding-bottom: 1vw;
+    font-size: 1.2rem;
+  }
