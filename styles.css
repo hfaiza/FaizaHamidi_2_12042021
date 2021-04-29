@@ -14,7 +14,9 @@ body {
 }
 
 #bloc-page {
-  max-width: 75rem;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: auto;
 }
 
@@ -35,8 +37,8 @@ h2 {
 
 h3 {
   font-size: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -176,7 +178,7 @@ button {
   width: 2.16em;
   background: #deebff;
   color: #0065fc;
-  border-radius: 20px;
+  border-radius: 50%;
   position: absolute;
   font-size: 20px;
   text-align: center;
@@ -261,48 +263,55 @@ article p {
   border-radius: 20px;
   box-shadow: 0 0 20px #d1d1d1;
   margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.images1 {
+  height: 70%;
+  width: 100%;
 }
 
 .cannebiere_image {
   background: url(images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg)
     no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .port_image {
   background: url(images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg)
     no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .mouettes_image {
   background: url(images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg)
     no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .mer_image {
   background: url(images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg)
     no-repeat;
   background-size: cover;
-  background-position: left 0px top -50px;
+  background-position: center;
 }
 
 .panier_image {
   background: url(images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg)
     no-repeat;
   background-size: cover;
-  background-position: left 0px top -30px;
+  background-position: center;
 }
 
 .amina_image {
   background: url(images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg)
     no-repeat;
   background-size: cover;
-  background-position: left 0px top -100px;
+  background-position: center;
 }
 
 .description1 {
+  height: 30%;
   width: 16vw;
   background: #fff;
   position: absolute;
@@ -340,32 +349,39 @@ h2 i {
   border-radius: 20px;
   box-shadow: 0 0 20px #d1d1d1;
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.images2 {
+  height: 130px;
+  width: 50%;
 }
 
 .soleil_image {
   background: url(images/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg)
     no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .eau_image {
   background: url(images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg)
     no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .bleu_blanc_image {
   background: url(images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg)
     no-repeat;
   background-size: cover;
-  background-position: left -50px top -250px;
+  background-position: center;
 }
 
 .description2 {
   height: 120px;
   width: 50%;
   background: #fff;
-  right: 0px;
+  right: 0;
+  top: 0;
   border-radius: 0 10px 10px 0;
   padding: 5px 5px 5px 15px;
   font-size: 0.9rem;
@@ -455,8 +471,8 @@ footer {
   flex-wrap: wrap;
   font-size: 0.9em;
   line-height: 2em;
-  max-width: 75rem;
-  padding: 30px 0 20px 0;
+  max-width: 1200px;
+  padding: 30px 30px 20px 30px;
 }
 
 footer div {
@@ -466,9 +482,6 @@ footer div {
 /* MEDIA QUERIES TABLETTE */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  #bloc-page {
-    max-width: 95%;
-  }
 
   /* BARRE DE RECHERCHE */
 
@@ -491,19 +504,10 @@ footer div {
   .sous-bloc_populaires article {
     height: 200px;
     width: 100%;
-    background-size: cover;
   }
 
-  .soleil_image {
-    background-position: left 0px top -200px;
-  }
-
-  .eau_image {
-    background-position: left -200px top -200px;
-  }
-
-  .bleu_blanc_image {
-    background-position: left -100px top -500px;
+  .images2 {
+    height: 200px;
   }
 
   .description2,
@@ -527,11 +531,10 @@ footer div {
   .sous-bloc_hebergements article {
     height: 200px;
     width: 100%;
-    background-size: cover;
   }
 
   .description1 {
-    right: 0px;
+    right: 0;
     padding: 5px 5px 5px 15px;
   }
 
@@ -540,31 +543,13 @@ footer div {
     bottom: 1vw;
   }
 
-  .cannebiere_image,
-  .panier_image {
-    background-position: left -200px top -50px;
-  }
-
-  .port_image {
-    background-position: left -130px top -210px;
-  }
-
-  .mouettes_image {
-    background-position: left -300px top -210px;
-  }
-
-  .mer_image {
-    background-position: left -200px top -300px;
-  }
-
-  .amina_image {
-    background-position: left -350px top -450px;
+  .images1 {
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
   }
 
   /* ACTIVITÉS */
-
-  .bloc_activites {
-  }
 
   .activites article {
     width: 45vw;
@@ -610,13 +595,12 @@ footer div {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {  
-  * {
-    box-sizing: border-box;
-  }
 
   #bloc-page {
     margin: 0;
-    }
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .logo, #inscription, header + section, .bloc_hebergements, .activites {
     margin-left: 5vw;
@@ -702,11 +686,6 @@ footer div {
     align-items: baseline;
   }
 
-  .logements_disponibles i {
-    padding-left: 0.4rem;
-    padding-right: 0.7rem;
-  } 
-
   /* HÉBERGEMENTS + POPULAIRES */
 
   .bloc-hebergements-et-populaires {
@@ -733,21 +712,8 @@ footer div {
     box-shadow: 0 0 10px #d1d1d1;
   }
 
-  .cannebiere_image, .port_image, .mouettes_image {
-    background-size: cover;
-    background-position: left 0 top -50px;
-  }
-
-  .mer_image {
-    background-position: left 0 top -100px;
-  }
-
-  .amina_image {
-    background-position: left 0 top -200px;
-  }
-
   .description1 {
-    width: 100%;
+    width: 96%;
     padding: 2%;
   }
 
@@ -764,6 +730,10 @@ footer div {
     height: 150px;
     margin-bottom: 1em;
     background-size: cover;
+  }
+
+  .images2 {
+    height: 150px;
   }
 
   .description2 {
@@ -784,7 +754,7 @@ footer div {
   }
 
   .activites h3 {
-    width: 100%;
+    width: 90%;
     padding: 5%;
   } 
 
