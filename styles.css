@@ -266,48 +266,10 @@ article p {
   overflow: hidden;
 }
 
-.images1 {
+.sous-bloc_hebergements img {
   height: 70%;
   width: 100%;
-}
-
-.cannebiere_image {
-  background: url(images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-}
-
-.port_image {
-  background: url(images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-}
-
-.mouettes_image {
-  background: url(images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-}
-
-.mer_image {
-  background: url(images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.panier_image {
-  background: url(images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.amina_image {
-  background: url(images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
 }
 
 .description1 {
@@ -352,28 +314,10 @@ h2 i {
   overflow: hidden;
 }
 
-.images2 {
+.sous-bloc_populaires img {
   height: 130px;
   width: 50%;
-}
-
-.soleil_image {
-  background: url(images/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-}
-
-.eau_image {
-  background: url(images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-}
-
-.bleu_blanc_image {
-  background: url(images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg)
-    no-repeat;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
 }
 
 .description2 {
@@ -482,7 +426,6 @@ footer div {
 /* MEDIA QUERIES TABLETTE */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   /* BARRE DE RECHERCHE */
 
   form {
@@ -503,10 +446,9 @@ footer div {
 
   .sous-bloc_populaires article {
     height: 200px;
-    width: 100%;
   }
 
-  .images2 {
+  .sous-bloc_populaires img {
     height: 200px;
   }
 
@@ -543,7 +485,7 @@ footer div {
     bottom: 1vw;
   }
 
-  .images1 {
+  .sous-bloc_hebergements img {
     height: 100%;
     width: 50%;
     border-radius: 20px;
@@ -590,19 +532,22 @@ footer div {
 
 @media (min-width: 768px) {
   button i {
-    display: none!important;
+    display: none !important;
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {  
-
+@media (min-width: 320px) and (max-width: 767px) {
   #bloc-page {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .logo, #inscription, header + section, .bloc_hebergements, .activites {
+  .logo,
+  #inscription,
+  header + section,
+  .bloc_hebergements,
+  .activites {
     margin-left: 5vw;
     margin-right: 5vw;
   }
@@ -626,7 +571,7 @@ footer div {
     margin-left: auto;
   }
 
-  nav { 
+  nav {
     order: 3;
     border-top: none;
     width: 100%;
@@ -726,13 +671,11 @@ footer div {
   }
 
   .bloc_populaires article {
-    width: 100%;
     height: 150px;
     margin-bottom: 1em;
-    background-size: cover;
   }
 
-  .images2 {
+  .sous-bloc_populaires img {
     height: 150px;
   }
 
@@ -756,7 +699,7 @@ footer div {
   .activites h3 {
     width: 90%;
     padding: 5%;
-  } 
+  }
 
   .fort_image {
     background-position: left 0 top -200px;
@@ -783,3 +726,4 @@ footer div {
     padding-bottom: 1vw;
     font-size: 1.2rem;
   }
+}
