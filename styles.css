@@ -15,8 +15,7 @@ body {
 
 #bloc-page {
   max-width: 1200px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px 0 30px;
   margin: auto;
 }
 
@@ -68,9 +67,7 @@ nav {
 
 nav a {
   display: block;
-  padding-top: 2rem;
-  padding-right: 1.3rem;
-  padding-left: 1.3rem;
+  padding: 2rem 1.3rem 0 1.3rem;
   border-top: solid 2px transparent;
 }
 
@@ -118,8 +115,7 @@ form {
 label i {
   background: var(--grey);
   padding: 1rem 1rem 1rem 1.1rem;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  border-radius: 1rem 0 0 1rem;
 }
 
 #recherche {
@@ -141,8 +137,7 @@ button {
   color: #fff;
   font-size: 1rem;
   padding: 0.8rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: 0 1rem 1rem 0;
 }
 
 /* FILTRES */
@@ -164,8 +159,7 @@ button {
   border: solid 2px #e7e7e8;
   border-radius: 20px;
   padding: 10px 20px 10px 50px;
-  margin-right: 1rem;
-  margin-bottom: 0.8rem;
+  margin: 0 1rem 0.8rem 0;
 }
 
 .filtre:hover {
@@ -182,7 +176,6 @@ button {
   position: absolute;
   font-size: 20px;
   text-align: center;
-  vertical-align: middle;
   line-height: 45px;
 }
 
@@ -274,11 +267,10 @@ article p {
 
 .description1 {
   height: 30%;
-  width: 16vw;
+  width: 100%;
   background: #fff;
   position: absolute;
-  bottom: 0px;
-  border-radius: 0 0 10px 10px;
+  bottom: 0;
   padding: 0.5vw 0 0.5vw 1vw;
   font-size: 0.9rem;
 }
@@ -326,7 +318,6 @@ h2 i {
   background: #fff;
   right: 0;
   top: 0;
-  border-radius: 0 10px 10px 0;
   padding: 5px 5px 5px 15px;
   font-size: 0.9rem;
   position: absolute;
@@ -335,8 +326,7 @@ h2 i {
 /* ACTIVITÉS */
 
 .activites {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin: 3rem 0 2rem 0;
 }
 
 .bloc_activites {
@@ -350,6 +340,7 @@ h2 i {
   background-size: cover;
   position: relative;
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 0 10px #d3d3d3;
   margin-bottom: 2rem;
 }
@@ -397,8 +388,7 @@ h2 i {
   width: 20.5vw;
   background: #fff;
   position: absolute;
-  bottom: 0px;
-  border-radius: 0 0 20px 20px;
+  bottom: 0;
   padding: 1.5vw 0 1.5vw 1.5vw;
 }
 
@@ -423,7 +413,7 @@ footer div {
   padding-right: 14rem;
 }
 
-/* MEDIA QUERIES TABLETTE */
+/* RESPONSIVE TABLETTE */
 
 @media (min-width: 768px) and (max-width: 1024px) {
   /* BARRE DE RECHERCHE */
@@ -450,13 +440,13 @@ footer div {
 
   .sous-bloc_populaires img {
     height: 200px;
+    width: 40%;
   }
 
   .description2,
   .description1 {
     height: 190px;
     width: 60%;
-    border-radius: 0 10px 10px 0;
     font-size: 1.5rem;
   }
 
@@ -487,8 +477,7 @@ footer div {
 
   .sous-bloc_hebergements img {
     height: 100%;
-    width: 50%;
-    border-radius: 20px;
+    width: 40%;
   }
 
   /* ACTIVITÉS */
@@ -528,7 +517,7 @@ footer div {
   }
 }
 
-/* MEDIA QUERIES MOBILE */
+/* RESPONSIVE MOBILE */
 
 @media (min-width: 768px) {
   button i {
@@ -536,7 +525,7 @@ footer div {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
   #bloc-page {
     margin: 0;
     padding-left: 0;
@@ -548,8 +537,7 @@ footer div {
   header + section,
   .bloc_hebergements,
   .activites {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: 0 5vw 0 5vw;
   }
 
   /* EN-TÊTE */
@@ -562,7 +550,7 @@ footer div {
 
   .logo {
     order: 1;
-    height: 4rem;
+    height: 3rem;
     padding-top: 1rem;
   }
 
@@ -653,12 +641,12 @@ footer div {
   .bloc_hebergements article {
     width: 100%;
     height: 200px;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     box-shadow: 0 0 10px #d1d1d1;
   }
 
   .description1 {
-    width: 96%;
+    width: 100%;
     padding: 2%;
   }
 
@@ -671,21 +659,26 @@ footer div {
   }
 
   .bloc_populaires article {
-    height: 150px;
+    height: 130px;
     margin-bottom: 1em;
   }
 
   .sous-bloc_populaires img {
-    height: 150px;
+    width: 45%;
+    height: 130px;
   }
 
   .description2 {
     width: 55%;
-    height: 142px;
+    height: 122px;
     font-size: 0.9rem;
   }
 
   /* ACTIVITÉS */
+
+  .activites {
+    margin-top: 2rem;
+  }
 
   .bloc_activites {
     display: block;
@@ -722,8 +715,7 @@ footer div {
   }
 
   footer div {
-    padding-right: 5vw;
-    padding-bottom: 1vw;
+    padding: 5vw 5vw 1vw 0;
     font-size: 1.2rem;
   }
 }
