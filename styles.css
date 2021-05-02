@@ -36,7 +36,6 @@ h2 {
 
 h3 {
   font-size: 100%;
-  padding: 0;
   margin: 0;
 }
 
@@ -109,7 +108,6 @@ h1 + p {
 form {
   display: flex;
   margin-top: 2rem;
-  font-family: "Raleway", sans-serif;
 }
 
 label i {
@@ -126,7 +124,6 @@ label i {
 
 ::placeholder {
   font-weight: bold;
-  color: #000;
   font-size: 1rem;
 }
 
@@ -146,7 +143,6 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-  align-items: center;
   font-weight: bold;
 }
 
@@ -155,7 +151,6 @@ button {
 }
 
 .filtre {
-  display: flex;
   border: solid 2px #e7e7e8;
   border-radius: 20px;
   padding: 10px 20px 10px 50px;
@@ -168,11 +163,11 @@ button {
 }
 
 .left {
-  height: 2.16em;
-  width: 2.16em;
-  background: #deebff;
-  color: #0065fc;
-  border-radius: 50%;
+  height: 2.7rem;
+  width: 2.7rem;
+  background: var(--lightblue);
+  color: var(--blue);
+  border-radius: 20px;
   position: absolute;
   font-size: 20px;
   text-align: center;
@@ -208,20 +203,27 @@ button {
   display: flex;
 }
 
-.bloc_hebergements {
-  flex: 2;
-  margin-right: 30px;
+.bloc_hebergements,
+.bloc_populaires {
   padding: 30px;
   background: var(--grey);
   border-radius: 20px;
 }
 
+.bloc_hebergements {
+  flex: 2;
+  margin-right: 30px;
+}
+
 .bloc_populaires {
   flex: 1;
-  padding: 30px;
-  background: var(--grey);
+}
+
+.bloc-hebergements-et-populaires article {
+  border: #fff solid 4px;
   border-radius: 20px;
-  position: relative;
+  box-shadow: 0 0 20px #d1d1d1;
+  overflow: hidden;
 }
 
 .bleu {
@@ -252,11 +254,7 @@ article p {
   height: 190px;
   width: 17vw;
   position: relative;
-  border: #fff solid 4px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #d1d1d1;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 .sous-bloc_hebergements img {
@@ -271,7 +269,7 @@ article p {
   background: #fff;
   position: absolute;
   bottom: 0;
-  padding: 0.5vw 0 0.5vw 1vw;
+  padding: 0.5rem 0.5rem 0.5rem 0.7rem;
   font-size: 0.9rem;
 }
 
@@ -282,13 +280,12 @@ article p {
 /* POPULAIRES */
 
 .sous-bloc_populaires {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .sous-bloc_populaires span {
   position: absolute;
-  bottom: 1vw;
+  bottom: 1rem;
 }
 
 h2 i {
@@ -297,13 +294,9 @@ h2 i {
 
 .sous-bloc_populaires article {
   height: 130px;
-  width: 100%;
+  width: auto;
   position: relative;
-  border: #fff solid 4px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #d1d1d1;
   margin-bottom: 2rem;
-  overflow: hidden;
 }
 
 .sous-bloc_populaires img {
@@ -313,12 +306,12 @@ h2 i {
 }
 
 .description2 {
-  height: 120px;
+  height: 130px;
   width: 50%;
   background: #fff;
   right: 0;
   top: 0;
-  padding: 5px 5px 5px 15px;
+  padding: 0.5rem 0.5rem 0.1rem 0.9rem;
   font-size: 0.9rem;
   position: absolute;
 }
@@ -419,13 +412,19 @@ footer div {
   /* BARRE DE RECHERCHE */
 
   form {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   /* HÉBERGEMENTS + POPULAIRES */
 
   .bloc-hebergements-et-populaires {
     flex-direction: column-reverse;
+  }
+
+  .sous-bloc_populaires img,
+  .sous-bloc_hebergements img {
+    height: 100%;
+    width: 40%;
   }
 
   /* POPULAIRES */
@@ -438,14 +437,8 @@ footer div {
     height: 200px;
   }
 
-  .sous-bloc_populaires img {
-    height: 200px;
-    width: 40%;
-  }
-
-  .description2,
-  .description1 {
-    height: 190px;
+  .description2 {
+    height: 100%;
     width: 60%;
     font-size: 1.5rem;
   }
@@ -462,22 +455,21 @@ footer div {
 
   .sous-bloc_hebergements article {
     height: 200px;
-    width: 100%;
+    width: auto;
   }
 
   .description1 {
+    height: 200px;
+    width: 60%;
     right: 0;
-    padding: 5px 5px 5px 15px;
+    top: 0;
+    padding: 0.5rem 0.5rem 0.1rem 0.9rem;
+    font-size: 1.5rem;
   }
 
   .sous-bloc_hebergements span {
     position: absolute;
-    bottom: 1vw;
-  }
-
-  .sous-bloc_hebergements img {
-    height: 100%;
-    width: 40%;
+    bottom: 1rem;
   }
 
   /* ACTIVITÉS */
@@ -508,10 +500,6 @@ footer div {
 
   /* PIED DE PAGE */
 
-  footer {
-    max-width: 95%;
-  }
-
   footer div {
     padding-right: 5rem;
   }
@@ -519,15 +507,14 @@ footer div {
 
 /* RESPONSIVE MOBILE */
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   button i {
     display: none !important;
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   #bloc-page {
-    margin: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -543,30 +530,28 @@ footer div {
   /* EN-TÊTE */
 
   header {
-    display: flex;
     flex-wrap: wrap;
     margin-bottom: 1rem;
   }
 
   .logo {
-    order: 1;
     height: 3rem;
     padding-top: 1rem;
   }
 
   #inscription {
-    order: 2;
+    order: 1;
     margin-left: auto;
   }
 
   nav {
-    order: 3;
+    order: 2;
     border-top: none;
     width: 100%;
   }
 
   nav ul {
-    padding-right: 0;
+    padding: 0;
   }
 
   nav li {
@@ -590,7 +575,6 @@ footer div {
 
   form {
     margin-bottom: 2rem;
-    justify-content: center;
     position: relative;
   }
 
@@ -630,7 +614,6 @@ footer div {
   .bloc_hebergements {
     background: #fff;
     padding: 0;
-    margin-right: 5vw;
     margin-top: 2rem;
   }
 
@@ -639,14 +622,12 @@ footer div {
   }
 
   .bloc_hebergements article {
-    width: 100%;
+    width: auto;
     height: 200px;
     margin-bottom: 1rem;
-    box-shadow: 0 0 10px #d1d1d1;
   }
 
   .description1 {
-    width: 100%;
     padding: 2%;
   }
 
@@ -659,19 +640,15 @@ footer div {
   }
 
   .bloc_populaires article {
-    height: 130px;
     margin-bottom: 1em;
   }
 
   .sous-bloc_populaires img {
     width: 45%;
-    height: 130px;
   }
 
   .description2 {
     width: 55%;
-    height: 122px;
-    font-size: 0.9rem;
   }
 
   /* ACTIVITÉS */
@@ -686,11 +663,11 @@ footer div {
 
   .activites article {
     height: 200px;
-    width: 100%;
+    width: auto;
   }
 
   .activites h3 {
-    width: 90%;
+    width: 100%;
     padding: 5%;
   }
 
@@ -710,7 +687,6 @@ footer div {
   /* PIED DE PAGE */
 
   footer {
-    max-width: 90%;
     flex-direction: column;
   }
 
