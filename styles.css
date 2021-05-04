@@ -372,13 +372,6 @@ h2 i {
   background: var(--grey);
 }
 
-/* PIED DE PAGE */
-
-.footer {
-  width: 100%;
-  background: var(--grey);
-}
-
 footer {
   margin: auto;
   display: flex;
