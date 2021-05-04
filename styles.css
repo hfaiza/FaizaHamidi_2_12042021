@@ -120,6 +120,7 @@ label i {
   background: #fff;
   border: solid 2px var(--grey);
   padding: 0.8rem;
+  resize: 25;
 }
 
 ::placeholder {
@@ -251,24 +252,21 @@ article p {
 }
 
 .sous-bloc_hebergements article {
+  display: flex;
+  flex-direction: column;
   height: 190px;
   width: 17vw;
-  position: relative;
   margin-bottom: 2rem;
 }
 
 .sous-bloc_hebergements img {
-  height: 70%;
-  width: 100%;
+  height: 60%;
   object-fit: cover;
 }
 
 .description1 {
-  height: 30%;
-  width: 100%;
+  height: 40%;
   background: #fff;
-  position: absolute;
-  bottom: 0;
   padding: 0.5rem 0.5rem 0.5rem 0.7rem;
   font-size: 0.9rem;
 }
@@ -283,19 +281,14 @@ article p {
   display: block;
 }
 
-.sous-bloc_populaires span {
-  position: absolute;
-  bottom: 1rem;
-}
-
 h2 i {
   float: right;
 }
 
 .sous-bloc_populaires article {
+  display: flex;
   height: 130px;
   width: auto;
-  position: relative;
   margin-bottom: 2rem;
 }
 
@@ -309,11 +302,14 @@ h2 i {
   height: 130px;
   width: 50%;
   background: #fff;
-  right: 0;
-  top: 0;
   padding: 0.5rem 0.5rem 0.1rem 0.9rem;
   font-size: 0.9rem;
+  position: relative;
+}
+
+.sous-bloc_populaires span {
   position: absolute;
+  bottom: 1rem;
 }
 
 /* ACTIVITÉS */
@@ -329,60 +325,51 @@ h2 i {
 }
 
 .bloc_activites article {
+  display: flex;
+  flex-direction: column;
   width: 22vw;
-  background-size: cover;
-  position: relative;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 10px #d3d3d3;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.vieux_port_image {
-  height: 400px;
-  background: url(images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg)
-    no-repeat;
+.bloc_activites img {
+  object-fit: cover;
 }
 
-.fort_image {
-  height: 220px;
-  background: url(images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg)
-    no-repeat;
-  background-position: left 0px top -100px;
-}
-
-.frioul_image {
-  height: 150px;
-  background: url(images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg)
-    no-repeat;
-  background-position: left 0px top -20px;
-}
-
+.vieux_port_image,
 .calanques_image {
   height: 400px;
-  background: url(images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg)
-    no-repeat;
-  background-position: left -130px top 0;
 }
 
-.notre_dame_image {
-  height: 170px;
-  background: url(images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg)
-    no-repeat;
-}
-
+.fort_image,
 .longchamp_image {
   height: 200px;
-  background: url(images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg)
-    no-repeat;
+}
+
+.frioul_image,
+.notre_dame_image {
+  height: 120px;
+}
+
+.fort-frioul,
+.dame-longchamp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .activites h3 {
-  width: 20.5vw;
   background: #fff;
-  position: absolute;
-  bottom: 0;
   padding: 1.5vw 0 1.5vw 1.5vw;
+}
+
+/* PIED DE PAGE */
+
+.footer {
+  width: 100%;
+  background: var(--grey);
 }
 
 /* PIED DE PAGE */
@@ -408,7 +395,7 @@ footer div {
 
 /* RESPONSIVE TABLETTE */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 501px) and (max-width: 1200px) {
   /* BARRE DE RECHERCHE */
 
   form {
@@ -421,8 +408,7 @@ footer div {
     flex-direction: column-reverse;
   }
 
-  .sous-bloc_populaires img,
-  .sous-bloc_hebergements img {
+  .sous-bloc_populaires img {
     height: 100%;
     width: 40%;
   }
@@ -449,53 +435,23 @@ footer div {
     margin-right: 0;
   }
 
-  .sous-bloc_hebergements {
-    display: block;
+  .sous-bloc_hebergements article {
+    height: 230px;
+    width: 35vw;
   }
 
-  .sous-bloc_hebergements article {
-    height: 200px;
-    width: auto;
+  .sous-bloc_hebergements img {
+    height: 65%;
   }
 
   .description1 {
-    height: 200px;
-    width: 60%;
-    right: 0;
-    top: 0;
-    padding: 0.5rem 0.5rem 0.1rem 0.9rem;
-    font-size: 1.5rem;
-  }
-
-  .sous-bloc_hebergements span {
-    position: absolute;
-    bottom: 1rem;
+    height: 35%;
   }
 
   /* ACTIVITÉS */
 
   .activites article {
-    width: 45vw;
-  }
-
-  .activites h3 {
-    width: 45vw;
-  }
-
-  .fort_image {
-    background-position: left 0 top -230px;
-  }
-
-  .frioul_image {
-    background-position: left 0 top -100px;
-  }
-
-  .notre_dame_image {
-    background-position: left 0 top -30px;
-  }
-
-  .longchamp_image {
-    background-position: left 0 top -50px;
+    width: 40vw;
   }
 
   /* PIED DE PAGE */
@@ -507,13 +463,13 @@ footer div {
 
 /* RESPONSIVE MOBILE */
 
-@media (min-width: 767px) {
+@media (min-width: 500px) {
   button i {
     display: none !important;
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 500px) {
   #bloc-page {
     padding-left: 0;
     padding-right: 0;
@@ -666,22 +622,13 @@ footer div {
     width: auto;
   }
 
+  .activites img {
+    height: 75%;
+  }
+
   .activites h3 {
-    width: 100%;
+    height: 25%;
     padding: 5%;
-  }
-
-  .fort_image {
-    background-position: left 0 top -200px;
-  }
-
-  .calanques_image {
-    background-size: cover;
-    background-position: left 0 top -50px;
-  }
-
-  .longchamp_image {
-    background-position: left 0 top -50px;
   }
 
   /* PIED DE PAGE */
