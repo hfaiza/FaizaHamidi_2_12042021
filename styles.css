@@ -19,7 +19,7 @@ body {
   margin: auto;
 }
 
-/*TEXTE */
+/* TEXTE */
 
 h1,
 h2,
@@ -120,7 +120,7 @@ label i {
   background: #fff;
   border: solid 2px var(--grey);
   padding: 0.8rem;
-  resize: 25;
+  width: 180px;
 }
 
 ::placeholder {
@@ -258,12 +258,11 @@ article p {
 }
 
 .sous-bloc_hebergements img {
-  height: 60%;
+  height: 116px;
   object-fit: cover;
 }
 
 .description1 {
-  height: 40%;
   background: #fff;
   padding: 10px 5px 5px 10px;
   font-size: 0.9rem;
@@ -325,7 +324,7 @@ h2 i {
 .bloc_activites article {
   display: flex;
   flex-direction: column;
-  width: 22vw;
+  width: 17rem;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 10px #d3d3d3;
@@ -436,18 +435,14 @@ footer div {
   }
 
   .sous-bloc_hebergements img {
-    height: 65%;
-  }
-
-  .description1 {
-    height: 35%;
+    height: 157px;
   }
 
   /* ACTIVITÉS */
 
   .bloc_activites {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 20px;
   }
 
@@ -535,7 +530,7 @@ footer div {
     position: relative;
   }
 
-  input {
+  #recherche {
     width: 100%;
     border-radius: 0 1rem 1rem 0;
   }
@@ -586,11 +581,7 @@ footer div {
   }
 
   .bloc_hebergements img {
-    height: 70%;
-  }
-
-  .description1 {
-    height: 30%;
+    height: 170px;
   }
 
   /* POPULAIRES */
@@ -631,10 +622,6 @@ footer div {
 
   .activites img {
     height: 140px;
-  }
-
-  .activites h3 {
-    height: 60px;
   }
 
   /* PIED DE PAGE */
