@@ -120,15 +120,19 @@ label i {
   background: #fff;
   border: solid 2px var(--grey);
   padding: 0.8rem;
-  width: 180px;
+  width: 200px;
 }
 
 ::placeholder {
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  opacity: 1;
   font-weight: bold;
   font-size: 1rem;
 }
 
 button {
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   background: var(--blue);
   border: none;
